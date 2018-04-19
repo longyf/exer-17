@@ -19,6 +19,7 @@ void PrintFrom1ToMaxNDigits(int n) {
 		finished=true;
 		AddOne(num, n);
 		PrintNum(num, n);
+		//判断是否达到最大的值。
 		for (int j=0; j!=n; ++j) {
 			if (num[j]!='9') finished=false;
 		}
@@ -44,6 +45,7 @@ void AddOne(char *num, int n) {
 }
 
 void PrintNum(char *num, int n) {
+	//不要输出左边的零。比如，001输出1。
 	bool zero=true;
 	for (int index=0; index!=n; index++) {
 		if (num[index]!='0') zero=false;
