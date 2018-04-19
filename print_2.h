@@ -17,6 +17,7 @@ void PrintFrom1ToMaxNDigits(int n) {
 	}
 
 	SetElements(num,n,0);
+	delete []num;
 }
 
 void SetElements(char *num,int n,int index) {
