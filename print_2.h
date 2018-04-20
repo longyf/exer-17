@@ -21,15 +21,16 @@ void PrintFrom1ToMaxNDigits(int n) {
 }
 
 void SetElements(char *num,int n,int index) {
+
+	//设置返回条件，表示已经处理完了最后一位。
 	if (index==n) {
+		PrintNum(num,n);
 		return;
 	}
-	int index2=index+1;
+
 	for (int i=0; i!=10; ++i) {
 		num[index]='0'+i;
-		//这一个判断比较奇怪，其实我不知道为什么会这样，不过加上之后就能避免输出错误的结果了。
-		if (index==n-1) PrintNum(num,n);
-		SetElements(num,n,index2);
+		SetElements(num,n,index+1);
 	}
 }
 

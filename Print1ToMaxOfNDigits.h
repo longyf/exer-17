@@ -17,6 +17,7 @@ void PrintFrom1ToMaxNDigits(int n) {
 		number[0]=i+'0';
 		Print1ToMaxOfNDigitsRecursively(number,n,0);
 	}
+	cout<<endl;
 	delete []number;
 }
 
