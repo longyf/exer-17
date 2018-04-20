@@ -1,7 +1,7 @@
 #include <iostream>
 //#include "print.h"
-#include "print_2.h"
-//#include "Print1ToMaxOfNDigits.h"
+//#include "print_2.h"
+#include "Print1ToMaxOfNDigits.h"
 using namespace std;
 
 void test1() {
