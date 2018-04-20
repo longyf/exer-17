@@ -16,7 +16,12 @@ void PrintFrom1ToMaxNDigits(int n) {
 		num[i]='0';
 	}
 
-	SetElements(num,n,0);
+	for (int i=0; i!=10; ++i) {
+		num[0]='0'+i;
+		PrintNum(num,n);
+		SetElements(num,n,1);
+	}
+
 	delete []num;
 }
 
@@ -28,7 +33,7 @@ void SetElements(char *num,int n,int index) {
 	for (int i=0; i!=10; ++i) {
 		num[index]='0'+i;
 		//这一个判断比较奇怪，其实我不知道为什么会这样，不过加上之后就能避免输出错误的结果了。
-		if (index==n-1) PrintNum(num,n);
+		PrintNum(num,n);
 		SetElements(num,n,index2);
 	}
 }
